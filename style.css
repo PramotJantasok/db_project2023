@@ -55,6 +55,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.2s ease-in-out;
+    font-family: 'Inter', sans-serif;
   }
   
   button[type="submit"]:hover {
