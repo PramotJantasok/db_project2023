@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,8 +6,8 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Inter', sans-serif;
+    background-color: #DEFFF7;
   }
   
   .login-container {
@@ -17,21 +18,22 @@
   }
   
   form {
-    background-color: white;
+    background-color: #88CFCB;
     padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
   }
   
   h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #46726F;
   }
   
   label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #fff;
   }
   
   input[type="text"],
@@ -41,13 +43,12 @@
     margin-bottom: 20px;
     border-radius: 5px;
     border: none;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
   }
   
   button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #46726F;
     color: white;
     border: none;
     border-radius: 5px;
@@ -57,7 +58,7 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #294241;
   }
   
   .register-link {
@@ -65,6 +66,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    color: #fff;
   }
   
   .register-link span {
@@ -72,13 +74,13 @@
   }
   
   .register-link a {
-    color: #4CAF50;
+    color: #46726F;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s ease-in-out;
   }
   
   .register-link a:hover {
-    color: #3e8e41;
+    color: #294241;
   }
   
