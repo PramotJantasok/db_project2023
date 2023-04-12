@@ -26,6 +26,10 @@ body {
     font-size: 20px;
 }
 
+.is-size-5 {
+    font-weight: bold;
+}
+
 .custombutton{
     margin-top: 3rem;
 }
