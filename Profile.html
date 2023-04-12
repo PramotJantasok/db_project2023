@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="Profile.css">
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        Home
+      </a>
+      <a class="navbar-item" href="#">
+        Food
+      </a>
+      <a class="navbar-item" href="#">
+        Table
+      </a>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-256x256">
+          <img src="https://via.placeholder.com/256x256" alt="Profile Picture">
+        </figure>
+      </div>
+      <div class="column">
+        <form>
+          <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Enter your first name">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Enter your last name">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Gender</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Age</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Enter your age">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Weight</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Enter your weight">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Height</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Enter your height">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Select Plan</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select plan</option>
+                  <option>Plan 1</option>
+                  <option>Plan 2</option>
+                  <option>Plan 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control has-text-centered">
+              <button class="button has-text-centered is-primary is-rounded is-medium">Edit Profile</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
