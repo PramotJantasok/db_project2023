@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Fitness Website</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+	<link rel="stylesheet" href="home.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+	  <div class="navbar-brand">
+	    <a class="navbar-item" href="#">
+	      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+	    </a>
+	    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+	      <span aria-hidden="true"></span>
+	      <span aria-hidden="true"></span>
+	      <span aria-hidden="true"></span>
+	    </a>
+	  </div>
+
+	  <div id="navbarBasicExample" class="navbar-menu">
+	    <div class="navbar-start">
+	      <a class="navbar-item" href="#">Home</a>
+	      <a class="navbar-item" href="#">Food</a>
+	      <a class="navbar-item" href="#">Table</a>
+	    </div>
+	  </div>
+	</nav>
+
+	<!-- First Container -->
+	<section class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-one-third">
+					<!-- Calories Today -->
+					<div class="box has-text-centered">
+						<p class="title">Calories Today</p>
+						<p class="subtitle is-size-1" id="calories-today">1000</p>
+						<button class="button is-primary is-rounded is-medium">Add Menu</button>
+						<p class="subtitle is-size-5">Goal: <span id="calories-goal">2000</span></p>
+						<div class="progress is-primary">
+							<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-two-thirds">
+					<!-- Profile -->
+					<div class="box has-text-centered">
+						<div class="column has-tex-centered">
+							<img src="https://via.placeholder.com/150" alt="Profile Picture">
+						</div>
+						<p class="title">Profile</p>
+						<p class="subtitle">Name: John Doe</p>
+						<p class="subtitle">Age: 30</p>
+						<p class="subtitle">Height: 175 cm</p>
+						<p class="subtitle">Weight: 75 kg</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
