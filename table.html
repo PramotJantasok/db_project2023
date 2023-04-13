@@ -8,31 +8,42 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <strong>Table Page</strong>
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+	  <div class="navbar-brand">
+	    <a class="navbar-item" href="#">
+	      <img src="https://media.discordapp.net/attachments/607137108590592000/1096124667531628606/logo.png?width=1023&height=191" width="152" height="68">
+	    </a>
+	    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+	      <span aria-hidden="true"></span>
+	      <span aria-hidden="true"></span>
+	      <span aria-hidden="true"></span>
+	    </a>
+	  </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="#">Home</a>
-          <a class="navbar-item" href="#">Food</a>
-          <a class="navbar-item" href="#">Table</a>
-        </div>
+	  <div id="navbarBasicExample" class="navbar-menu">
+	    <div class="navbar-start">
+	      <a class="navbar-item" href="#">Home</a>
+	      <a class="navbar-item" href="#">Food</a>
+		  <a class="navbar-item" href="#">Exercise</a>
+		  <div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link">
+			  Table
+			</a>
+	
+			<div class="navbar-dropdown">
+			  <a class="navbar-item">
+				Food
+			  </a>
+			  <a class="navbar-item">
+				Exercise
+			  </a>
+			</div>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+	</nav>
 
-        <div class="navbar-end">
-          <div class="navbar-item">
-          </div>
-        </div>
-      </div>
-    </nav>
 
     <div class="container mt-4">
     <div class="container">

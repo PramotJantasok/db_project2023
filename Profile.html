@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="Profile.css">
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- Navbar -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
 	  <div class="navbar-brand">
 	    <a class="navbar-item" href="#">
 	      <img src="https://media.discordapp.net/attachments/607137108590592000/1096124667531628606/logo.png?width=1023&height=191" width="152" height="68">
@@ -24,10 +25,26 @@
 	    <div class="navbar-start">
 	      <a class="navbar-item" href="#">Home</a>
 	      <a class="navbar-item" href="#">Food</a>
-	      <a class="navbar-item" href="#">Table</a>
+		  <a class="navbar-item" href="#">Exercise</a>
+		  <div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link">
+			  Table
+			</a>
+	
+			<div class="navbar-dropdown">
+			  <a class="navbar-item">
+				Food
+			  </a>
+			  <a class="navbar-item">
+				Exercise
+			  </a>
+			</div>
+		  </div>
+		</div>
 	    </div>
 	  </div>
 	</nav>
+
 
   <section class="container">
     <div class="columns m-3">
