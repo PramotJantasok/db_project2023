@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table Page</title>
+    <!-- Link Bulma CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="table.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <strong>Table Page</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#">Home</a>
+          <a class="navbar-item" href="#">Food</a>
+          <a class="navbar-item" href="#">Table</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+    <div class="container">
+      <h1 class="title">Table of Food</h1>
+      <div class="buttons">
+        <a class="button is-primary" href="#">History</a>
+      </div>
+    </div>
+      <table class="table is-striped is-hoverable is-fullwidth is-size-4">
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th>Menu</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">
+                Breakfast<br><br>
+                Total
+            </td>
+            <td> 
+                <div class="buttons">
+                    <a class="button is-primary" href="addfood.html">Add Menu</a>
+                </div>
+            </td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+                Lunch<br><br>
+                Total
+            </td>
+            <td>
+                <div class="buttons">
+                    <a class="button is-primary" href="addfood.html">Add Menu</a>
+                </div>
+            </td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+                Dinner<br><br>
+                Total
+            </td>
+            <td>
+                <div class="buttons">
+                    <a class="button is-primary" href="addfood.html">Add Menu</a>
+                </div>
+        </td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="button is-primary is-rounded">Confirm Meal</button>
+      <div class="mt-5">
+        <textarea class="textarea" placeholder="Add any additional notes here"></textarea>
+      </div>
+    </div>
+
+    <!-- Link Bulma JavaScript file -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"></script>
+  </body>
+</html>

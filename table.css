@@ -1,0 +1,20 @@
+/* Set height for navbar */
+.navbar {
+    height: 3.5rem;
+  }
+  
+  /* Set margin top for container */
+  .container {
+    margin-top: 2rem;
+  }
+  
+  /* Set margin top for button */
+  button {
+    margin-top: 1rem;
+  }
+  
+  /* Set margin top for textarea */
+  textarea {
+    margin-top: 1rem;
+  }
+  
