@@ -34,30 +34,41 @@
 	<section class="section">
 		<div class="container">
 			<div class="columns">
-				<div class="column is-one-third">
+				<div class="column is-two-thirds">
 					<!-- Calories Today -->
-					<div class="box has-text-centered">
-						<p class="title">Calories Today</p>
-						<p class="subtitle is-size-1" id="calories-today">1000</p>
-						<button class="button is-primary is-rounded is-medium">Add Menu</button>
-						<p class="subtitle is-size-5">Goal: <span id="calories-goal">2000</span></p>
-						<div class="progress is-primary">
-							<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					<div class="box">
+						<div class="level-left" style="margin: 0 0 1rem 0;">
+							<p class="title title-calories">Calories Today</p>
 						</div>
+						<div class="level-left">
+							<p class="subtitle is-size-1" id="calories-today">1000</p>
+							<p class="text-cal">cal</p>
+						</div>
+						<div class="level-right">
+							<button class="button is-primary is-large">เพิ่มอาหาร</button>
+						</div>
+						<progress class="progress is-info" value="50" max="100"></progress>
+						<div class="level-left">
+							<p class="subtitle is-size-3">Goal :</p>
+							<p class="subtitle is-size-3" id="calories-goal">2000</p>
+							<p class="subtitle is-size-4" style="margin: 0 0 0 0.5rem;">cal</p>
+						</div>
+						
 					</div>
 				</div>
-				<div class="column is-two-thirds">
+				<div class="column is-one-thirds">
 					<!-- Profile -->
 					<div class="box has-text-centered">
-						<div class="column has-tex-centered">
+						<div class="column">
 							<img src="https://via.placeholder.com/150" alt="Profile Picture">
 						</div>
-						<p class="title">Profile</p>
-						<p class="subtitle">Name: John Doe</p>
-						<p class="subtitle">Age: 30</p>
+						<div class="level-item name" style="margin: 0 0 1rem 0;">
+							<p class="subtitle is-size-4 fname">Wichai</p>
+							<p class="subtitle is-size-4 lname">แมวตัวใหญ่</p>
+						</div>
 						<p class="subtitle">Height: 175 cm</p>
 						<p class="subtitle">Weight: 75 kg</p>
-						<button class="button is-primary is-rounded is-medium">Edit Profile</button>
+						<button class="button is-primary is-medium" style="margin: 5.05rem 0 0 0;">แก้ไขข้อมูล</button>
 					</div>
 				</div>
 			</div>
