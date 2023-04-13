@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Page</title>
+	<!-- Link to Bulma CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="food.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="#">
+				<!-- Your logo or website name here -->
+				Logo/Website Name
+			</a>
+
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item" href="#">
+					Home
+				</a>
+
+				<a class="navbar-item" href="#">
+					Food
+				</a>
+
+				<a class="navbar-item" href="#">
+					Table
+				</a>
+			</div>
+
+			<!-- Search Bar -->
+			
+		</div>
+	</nav>
+
+	<section class="section">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <form>
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Search Food">
+                        </div>
+                        <div class="control">
+                            <button class="button is-link">Search</button>
+                            <!-- You can also use an icon instead of text for the button -->
+                            <!-- <i class="fas fa-search"></i> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+		<div class="container">
+			<h1 class="title">Food</h1>
+			<div class="columns is-multiline">
+				<!-- Food item cards -->
+				<div class="column is-one-quarter">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content">
+								<p><strong>Food Item 1</strong></p>
+								<p>Description of Food Item 1</p>
+							</div>
+                            <button class="button is-link">ADD</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="column is-one-quarter">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content">
+								<p><strong>Food Item 2</strong></p>
+								<p>Description of Food Item 2</p>
+							</div>
+                            <button class="button is-link">ADD</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="column is-one-quarter">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="content">
+								<p><strong>Food Item 3</strong></p>
+								<p>Description of Food Item 3</p>
+							</div>
+                            <button class="button is-link">ADD</button>
+						</div>
+					</div>
+				</div>
+                <div class="column is-one-quarter">
+					<div class="card">
+						<div class="card-image">
+							<figure class="image is-4by3">
+								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+							</figure>
+						</div>
+						<div class="has-tex-centered card-content">
+							<div class="content">
+								<p><strong>Food Item 2</strong></p>
+								<p>Description of Food Item 2</p>
+							</div>
+                            <button class="button is-link">ADD</button>
+						</div>
+					</div>
+				</div>
+    </section>
+</body>
