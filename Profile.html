@@ -30,6 +30,14 @@
 	</nav>
 
   <section class="container">
+    <div class="columns m-3">
+      <div class="column">
+        <div class="content is-normal">
+          <h1 class="is-size-1">My Profile</h1>
+        </div>
+      </div>
+    </div>
+
     <div class="columns">
       <div class="column">
         <figure class="image is-256x256">
@@ -38,73 +46,96 @@
       </div>
       <div class="column">
         <form>
-          <div class="field">
-            <label class="label">First Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Enter your first name">
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">First Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Enter your first name" style="border-radius: 20px;">
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <label class="label">Last Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Enter your last name">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Gender</label>
-            <div class="control">
-              <div class="select">
-                <select>
-                  <option>Select gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
+            <div class="column">
+              <div class="field">
+                <label class="label">Last Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Enter your last name" style="border-radius: 20px;">
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="field">
-            <label class="label">Age</label>
-            <div class="control">
-              <input class="input" type="number" placeholder="Enter your age">
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Gender</label>
+                <div class="control">
+                  <div class="select">
+                    <select style="border-radius: 20px;">
+                      <option>Select gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <label class="label">Weight</label>
-            <div class="control">
-              <input class="input" type="number" placeholder="Enter your weight">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Height</label>
-            <div class="control">
-              <input class="input" type="number" placeholder="Enter your height">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Select Plan</label>
-            <div class="control">
-              <div class="select">
-                <select>
-                  <option>Select plan</option>
-                  <option>Plan 1</option>
-                  <option>Plan 2</option>
-                  <option>Plan 3</option>
-                </select>
+            <div class="column">
+              <div class="field">
+                <label class="label">Age</label>
+                <div class="control">
+                  <input class="input" type="number" placeholder="Enter your age" style="border-radius: 20px;">
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="field is-grouped">
-            <div class="control ">
-              <button class="button is-primary is-fullwidth">Edit Profile</button>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Weight</label>
+                <div class="control">
+                  <input class="input" type="number" placeholder="Enter your weight" style="border-radius: 20px;">
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="field">
+                <label class="label">Height</label>
+                <div class="control">
+                  <input class="input" type="number" placeholder="Enter your height" style="border-radius: 20px;">
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Select Plan</label>
+                <div class="control">
+                  <div class="select">
+                    <select style="border-radius: 20px;">
+                      <option>Select plan</option>
+                      <option>Plan 1</option>
+                      <option>Plan 2</option>
+                      <option>Plan 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column m-5">
+              <div class="control ">
+                <button class="button is-primary is-fullwidth">Edit Profile</button>
+              </div>
+            </div>
+          </div>
+
         </form>
       </div>
     </div>
