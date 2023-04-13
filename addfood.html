@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Food Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="logo.png" alt="Logo">
+        </a>
+        <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#">Home</a>
+          <a class="navbar-item" href="#">Food</a>
+          <a class="navbar-item" href="#">Table</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Add menu topic -->
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Add Menu</h1>
+    <div class="columns">
+        <div class="column is-half">
+          <label class="label">Search for food:</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="e.g. Pizza">
+          </div>
+          <div class="columns is-multiline mt-2">
+            <div class="column is-4">
+              <div class="card">
+                <div class="card-image">
+                    <label class="label">Matching food:</label>
+                  <figure class="image is-4by3">
+                    <img src="pizza.jpg" alt="Pizza">
+                  </figure>
+                </div>
+                
+                <div class="card-content">
+                
+                  <p class="title is-4">Pizza</p>
+                  <p class="subtitle is-6">Italian dish</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="column is-half">
+        <div class="field">
+          <div class="column">
+            <label class="label">Amount:</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="e.g. 2">
+            </div>
+          </div>
+          <div class="column">
+            <label class="label">Calories:</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="e.g. 800" disabled>
+            </div>
+          </div>
+          <div class="column">
+            <label class="label">มื้ออาหาร</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>มื้ออาหาร</option>
+                  <option>มื้อเช้า</option>
+                  <option>มื้อกลางวัน</option>
+                  <option>มื้อเย็น</option>
+                </select>
+              </div>
+            </div>
+          </div>
+           <!-- Add button -->
+          <div class="column is-multiline">
+            <div class="control">
+              <button class="button is-primary">Add Menu</button>
+            </div>
+           </div>
+        </div>
+      </div>
+        </div>
+        
+
+        <!-- Search menu box with picture -->
+        
+
+        <!-- Amount of menu box -->
+       
+
+       
+
+      </div>
+    </section>
+
+  </body>
+</html>
