@@ -47,112 +47,98 @@
 
 
   <section class="container">
-    <div class="columns m-3">
+    <div class="columns is-multiline is-centered">
       <div class="column">
-        <div class="content is-normal">
-          <h1 class="is-size-1">My Profile</h1>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns">
-      <div class="column">
-        <figure class="image is-100x80">
-          <img src="https://via.placeholder.com/100x80" alt="Profile Picture">
+        <figure class="image is-256x256">
+          <img src="https://via.placeholder.com/256x256" alt="Profile Picture">
         </figure>
+        <div class="file has-name is-fullwidth">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+            <span class="file-name">
+              Screen Shot 2017-07-29 at 15.54.25.png
+            </span>
+          </label>
+        </div>
       </div>
       <div class="column">
         <form>
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">First Name:</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Enter your first name" style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                </div>
-              </div>
+          <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Enter your first name">
             </div>
+          </div>
 
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">Last Name:</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Enter your last name" style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                </div>
+          <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Enter your last name">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Gender</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
               </div>
             </div>
           </div>
 
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">Gender:</label>
-                <div class="control">
-                  <div class="select">
-                    <select style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                      <option>Select gender</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+          <div class="field">
+            <label class="label">Age</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Enter your age">
             </div>
+          </div>
 
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">Age:</label>
-                <div class="control">
-                  <input class="input" type="number" placeholder="Enter your age" style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                </div>
+          <div class="field">
+            <label class="label">Weight(kg)</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Enter your weight">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Height(cm)</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Enter your height">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Select Plan</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select plan</option>
+                  <option>Plan 1</option>
+                  <option>Plan 2</option>
+                  <option>Plan 3</option>
+                </select>
               </div>
             </div>
           </div>
 
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">Weight:</label>
-                <div class="control">
-                  <input class="input" type="number" placeholder="Enter your weight" style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">Height:</label>
-                <div class="control">
-                  <input class="input" type="number" placeholder="Enter your height" style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                </div>
-              </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="font-thai button is-size-5">บันทึกข้อมูล</button>
             </div>
           </div>
-
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label is-size-5">Select Plan:</label>
-                <div class="control">
-                  <div class="select">
-                    <select style="border-radius: 20px; background-color:#D9D9D9; font-size: 25px;">
-                      <option>Select plan</option>
-                      <option>ลดน้ำหนัก</option>
-                      <option>เพิ่มกล้ามเนื้อ</option>
-                      <option>ดูแลสุขภาพ</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column m-5">
-              <div class="control p-4">
-                <button class="button is-primary is-fullwidth is-size-4" style="border-radius: 8px;">บันทึกข้อมูล</button>
-              </div>
-            </div>
-          </div>
-
         </form>
       </div>
     </div>

@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr&display=swap");
+
+body {
+  /* background-color: #defff7; */
+  font-family: "Inter", sans-serif;
+}
+
 /* Navbar */
 .navbar {
   background-color: #ffffff;
@@ -23,6 +31,26 @@
   color: #3273dc;
 }
 
-/* Container */
+.font-thai {
+  font-family: "Mitr", sans-serif;
+}
 
-  
+/* Container */
+.container {
+  margin: 10vh auto;
+}
+
+.label {
+  color: #46726F;
+}
+
+.button {
+  background-color: #46726F;
+  color: #fff;
+  transition: 0.15s;
+}
+
+.button:hover {
+  background-color: #345553;
+  color: #fff;
+}
