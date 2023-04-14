@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table Page</title>
+    <!-- Link Bulma CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="exercisetable.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+	  <div class="navbar-brand">
+	    <a class="navbar-item" href="#">
+	      <img src="https://media.discordapp.net/attachments/607137108590592000/1096124667531628606/logo.png?width=1023&height=191" width="152" height="68">
+	    </a>
+	    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+	      <span aria-hidden="true"></span>
+	      <span aria-hidden="true"></span>
+	      <span aria-hidden="true"></span>
+	    </a>
+	  </div>
+
+	  <div id="navbarBasicExample" class="navbar-menu">
+	    <div class="navbar-start">
+	      <a class="navbar-item" href="#">Home</a>
+	      <a class="navbar-item" href="#">Food</a>
+		  <a class="navbar-item" href="#">Exercise</a>
+		  <div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link">
+			  Table
+			</a>
+	
+			<div class="navbar-dropdown">
+			  <a class="navbar-item">
+				Food
+			  </a>
+			  <a class="navbar-item">
+				Exercise
+			  </a>
+			</div>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+	</nav>
+
+
+    <div class="container mt-4">
+    <div class="container">
+      <h1 class="title">Table of Food</h1>
+      <div class="level-right buttons">
+        <a class="button" href="#">History</a>
+      </div>
+    </div>
+      <table class="table is-striped is-hoverable is-fullwidth is-size-4">
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Type</th>
+            <th>Muscle</th>
+            <th>Recommand</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <div class="buttons">
+                    <a class="button" href="addfood.html">Add Exercise</a>
+                </div>
+            </td>
+            <td>0</td>
+            <td>-</td>
+            <td>0</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            
+          </tr>
+          <tr>
+            <td>
+                <div class="buttons">
+                    <a class="button" href="addfood.html">Add Exercise</a>
+                </div>
+            </td>
+            <td>0</td>
+            <td>-</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>
+                <div class="buttons">
+                    <a class="button" href="addfood.html">Add Exercise</a>
+                </div>
+            </td>
+            <td>0</td>
+            <td>-</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="level-item">
+        <button class="font-thai button" style="width: 400px; font-size: 25px;">สรุปผลการออกกำลังกาย</button>
+      </div>
+      
+      <div class="mt-5">
+        <textarea class="textarea" placeholder="Add any additional notes here"></textarea>
+      </div>
+    </div>
+
+    <!-- Link Bulma JavaScript file -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"></script>
+  </body>
+</html>
