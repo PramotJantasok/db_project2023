@@ -1,24 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr&display=swap");
+
+body {
+  /* background-color: #defff7; */
+  font-family: "Inter", sans-serif;
+}
+
 /* Navbar */
 .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dbdbdb;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand {
-    color: #3273dc;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 2rem;
-  }
-  
-  .navbar-item {
-    color: #363636;
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-  
-  .navbar-item:hover {
-    color: #3273dc;
-  }
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #3273dc;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.navbar-item {
+  color: #363636;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.navbar-item:hover {
+  color: #3273dc;
+}
+
+th, .font-th{
+  font-family: "Mitr", sans-serif;
+}
+h3 {
+  font-family: "Inter", sans-serif;
+}
+
+.column.is-4.bigbox {
+  border-radius: 10px!important;
+  border: 1px solid #dbdbdb!important;
+  padding: 2em;
+}
+
+.button {
+  background-color: #46726F;
+  color: #fff;
+  transition: 0.15s;
+}
+
+.button:hover {
+  background-color: #345553;
+  color: #fff;
+}
