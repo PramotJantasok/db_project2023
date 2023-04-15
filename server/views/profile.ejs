@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/Profile.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include('nav') %>
+    <section class="container">
+        <div class="columns is-multiline is-centered">
+            <div class="column">
+                <figure class="image is-256x256">
+                    <img src="https://via.placeholder.com/256x256" alt="Profile Picture">
+                </figure>
+                <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Choose a file…
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            Screen Shot 2017-07-29 at 15.54.25.png
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="column">
+                <form>
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter your first name">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Last Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter your last name">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Gender</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Age</label>
+                        <div class="control">
+                            <input class="input" type="number" placeholder="Enter your age">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Weight(kg)</label>
+                        <div class="control">
+                            <input class="input" type="number" placeholder="Enter your weight">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Height(cm)</label>
+                        <div class="control">
+                            <input class="input" type="number" placeholder="Enter your height">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Select Plan</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Select plan</option>
+                                    <option>Plan 1</option>
+                                    <option>Plan 2</option>
+                                    <option>Plan 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="font-thai button is-size-5">บันทึกข้อมูล</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('footer') %>
+</body>
+
+</html>
