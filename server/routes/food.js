@@ -19,9 +19,8 @@ function dataTime(){
 }
 
 router.get('/table/food', (req, res, next) =>{
-    var time = Date();
-    console.log(time);
-    res.render('tableFood.ejs');
+    const data = dataTime();
+    res.render('tableFood.ejs', {});
 });
 
 exports.router = router;
