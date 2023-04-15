@@ -7,6 +7,8 @@ router.get('/', (req, res, next)=>{
     res.render('home')
 });
 
-
+router.get('/table/food', (req, res, next) =>{
+    res.render('tableFood.ejs');
+});
 
 exports.router = router;
