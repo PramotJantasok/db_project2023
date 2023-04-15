@@ -1,6 +1,5 @@
 const express = require("express");
 const conn = require('../configs/config_aws');
-
 router = express.Router();
 
 router.get('/', (req, res, next)=>{
@@ -12,7 +11,7 @@ router.get('/table/food', (req, res, next) =>{
 });
 
 router.get('/register',(req,res,next) => {
-    res.render('login');
+    res.render('register');
 });
 
 exports.router = router;
