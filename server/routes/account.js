@@ -6,27 +6,27 @@ router = express.Router();
 
 router.post('/register',async (req,res,next) => {
     try{
-        const {user_name,user_pass,user_fname,user_lname} = req.body;
-<<<<<<< HEAD
-        console.log("BODY",req.body);
-        // const[row,flied] = await conn.query(
-        //     "INSERT INTO `user` (user_name,user_password,user_fname,user_lname) values (?,?,?,?)",
-=======
+        const {user_name,user_pass,user_fname,user_lname,user_gender,user_plan,user_age,user_weight,user_height} = req.body;
+
         
         console.log(req.body);
-        // const [row,fields] = await conn.query(
-        //     "INSERT INTO `USER` (user_name,user_password,user_fname,user_lname) values (?,?,?,?)",
->>>>>>> bc3b43fafe16b0f97cfff98bb28b7303e74f5921
-        //     [user_name,user_pass,user_fname,user_lname]
-        // )
+        const [row,fields] = await conn.query(
+            "INSERT INTO `USER` (user_name,user_password,user_fname,user_lname) values (?,?,?,?)",
+            [user_name,user_pass,user_fname,user_lname]
+        )
+        const [row2,fields2] = await conn.query(
+            "INSERT INTO `PLAN` (plan_name) values (?)",
+            [user_plan]
+        )
+        const [row3,fields3] = await conn.query(
+            "INSERT INTO `PROFILE` (user_id,profile_age,profile_height,profile_weight,profile_gender) values (?,?,?,?,?)",
+            [row.insertId,user_age,user_height,user_weight,user_gender]
+        )
         res.render("login")
     }catch(er){
         console.log(er);
     }
-})
+});
 
-<<<<<<< HEAD
+
 exports.router = router;
-=======
-exports.router = router;
->>>>>>> bc3b43fafe16b0f97cfff98bb28b7303e74f5921

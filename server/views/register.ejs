@@ -10,10 +10,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
-    <form action="/register" method="POST">
->>>>>>> bc3b43fafe16b0f97cfff98bb28b7303e74f5921
         <section class="section">
             <div class="container">
                 <div class="columns is-centered">
@@ -44,7 +40,7 @@
                                                 <label class="label">Gender</label>
                                                 <div class="control">
                                                     <div class="select is-rounded">
-                                                        <select>
+                                                        <select name="user_gender">
                                                             <option>Select gender</option>
                                                             <option>Male</option>
                                                             <option>Female</option>
@@ -56,7 +52,7 @@
                                                 <label class="label">Plan</label>
                                                 <div class="control">
                                                     <div class="select is-rounded">
-                                                        <select>
+                                                        <select name="user_plan">
                                                             <option>Select plan</option>
                                                             <option>Basic</option>
                                                             <option>Pro</option>
@@ -69,21 +65,21 @@
                                                 <label class="label">Age</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="text"
-                                                        placeholder="Enter age" />
+                                                        placeholder="Enter age" name="user_age" />
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <label class="label">Weight</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="text"
-                                                        placeholder="Enter weight" />
+                                                        placeholder="Enter weight" name="user_weight"/>
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <label class="label">Height</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="text"
-                                                        placeholder="Enter height" />
+                                                        placeholder="Enter height" name="user_height"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -106,7 +102,7 @@
                                                 <label class="label">Confirm Password</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="password"
-                                                        placeholder="Confirm password" name="user_pass" />
+                                                        placeholder="Confirm password" />
                                                 </div>
                                             </div>
                                             <div class="field">
