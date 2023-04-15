@@ -11,4 +11,8 @@ router.get('/table/food', (req, res, next) =>{
     res.render('tableFood.ejs');
 });
 
+router.get('/register',(req,res,next) => {
+    res.render('login');
+});
+
 exports.router = router;

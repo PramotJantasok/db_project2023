@@ -12,7 +12,12 @@ const indexRoute = require('./routes/index');
 app.use(indexRoute.router);
 
 const foodRoute = require('./routes/food');
+const AccountRoute = require('./routes/account');
+
+app.use(AccountRoute.router);
 app.use(foodRoute.router);
+
+
 
 app.listen(3000, () => {
     console.log(`server listening at http://localhost:3000`);

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="/register" method="post">
         <section class="section">
             <div class="container">
                 <div class="columns is-centered">
@@ -27,14 +27,14 @@
                                                 <label class="label">First Name</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="text"
-                                                        placeholder="Enter first name" />
+                                                        placeholder="Enter first name" name="user_fname" />
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <label class="label">Last Name</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="text"
-                                                        placeholder="Enter last name" />
+                                                        placeholder="Enter last name" name="user_lname"/>
                                                 </div>
                                             </div>
                                             <div class="field">
@@ -89,14 +89,14 @@
                                                 <label class="label">Username</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="text"
-                                                        placeholder="Enter username" />
+                                                        placeholder="Enter username"  name="user_name"/>
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <label class="label">Password</label>
                                                 <div class="control">
                                                     <input class="input is-rounded" type="password"
-                                                        placeholder="Password" />
+                                                        placeholder="Password" name="user_pass"/>
                                                 </div>
                                             </div>
                                             <div class="field">
@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="field">
                                                 <div class="control custombutton">
-                                                    <button class="button is-rounded">Register</button>
+                                                    <button class="button is-rounded" type="submit">Register</button>
                                                 </div>
                                             </div>
                                         </div>
