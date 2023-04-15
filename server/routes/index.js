@@ -12,7 +12,7 @@ router.get('/table/food', (req, res, next) =>{
 });
 
 router.get('/register',(req,res,next) => {
-    res.render('login');
+    res.render('register');
 });
 
 exports.router = router;
