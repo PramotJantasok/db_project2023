@@ -44,11 +44,11 @@
 							<img src="https://via.placeholder.com/150" alt="Profile Picture">
 						</div>
 						<div class="level-item name" style="margin: 0 0 1rem 0;">
-							<p class="subtitle is-size-4 fname">Wichai</p>
-							<p class="subtitle is-size-4 lname">แมวตัวใหญ่</p>
+							<p class="subtitle is-size-4 fname"><%= user.user_fname %></p>
+							<p class="subtitle is-size-4 lname"><%= user.user_lname %></p>
 						</div>
-						<p class="subtitle">Height: 175 cm</p>
-						<p class="subtitle">Weight: 75 kg</p>
+						<p class="subtitle">Height: <%= user.profile_height %> cm</p>
+						<p class="subtitle">Weight: <%= user.profile_weight%> kg</p>
 						<a href="./profile"><button class="button is-primary is-medium" style="margin: 5.05rem 0 0 0;">แก้ไขข้อมูล</button></a>
 					</div>
 				</div>

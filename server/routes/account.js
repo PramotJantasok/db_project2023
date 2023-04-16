@@ -32,18 +32,39 @@ router.post('/login' ,async (req,res,next) => {
         const {login_name,login_password} = req.body;
         // console.log(req.body);
         const [row,fields] = await conn.query(
-            "SELECT user_name,user_password FROM `USER` WHERE user_name = ? and user_password = ?",
+            "SELECT user_name,user_password,user_id FROM `USER` WHERE user_name = ? and user_password = ?",
             [login_name,login_password]
         )
         console.log(row);
+
         if (row.length == 1){
-            res.render("home")
+            res.setHeader('Set-Cookie', 'token='+row[0].user_id)
+            res.render("home", {
+                id: row.user_id
+            })
             console.log("success");
         }
         else{
             res.render("login")
             console.log("not found");
         }
+    }catch(er){
+        console.log(er);
+    }
+})
+
+router.get('/', async (req,res,next) =>{
+    try{
+        const id = req.get('Cookie').split('token=')[1].trim()
+        console.log(id);
+        const [row,fields] = await conn.query(
+            "SELECT profile_height,profile_weight,user_fname,user_lname FROM `PROFILE` join `USER` as u using (user_id) where u.user_id = ?;",
+            [id]
+        )
+        console.log(row[0]);
+        res.render('home',{user:row[0]})
+        // console.log();
+        // res.send({user:row})
     }catch(er){
         console.log(er);
     }
