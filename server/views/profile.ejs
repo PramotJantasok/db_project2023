@@ -36,18 +36,18 @@
                 </div>
             </div>
             <div class="column">
-                <form>
+                <form action="/profile" method="PUT">
                     <div class="field">
                         <label class="label">First Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Enter your first name">
+                            <input class="input" type="text" placeholder="Enter your first name" id="fname" value="<%=  %>">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Last Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Enter your last name">
+                            <input class="input" type="text" placeholder="Enter your last name" id="lname" >
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@
                         <label class="label">Gender</label>
                         <div class="control">
                             <div class="select">
-                                <select>
+                                <select id="gender">
                                     <option>Select gender</option>
                                     <option>Male</option>
                                     <option>Female</option>
@@ -68,21 +68,21 @@
                     <div class="field">
                         <label class="label">Age</label>
                         <div class="control">
-                            <input class="input" type="number" placeholder="Enter your age">
+                            <input class="input" type="number" placeholder="Enter your age" id="age">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Weight(kg)</label>
                         <div class="control">
-                            <input class="input" type="number" placeholder="Enter your weight">
+                            <input class="input" type="number" placeholder="Enter your weight" id="weight">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Height(cm)</label>
                         <div class="control">
-                            <input class="input" type="number" placeholder="Enter your height">
+                            <input class="input" type="number" placeholder="Enter your height" id="height">
                         </div>
                     </div>
 
@@ -90,11 +90,11 @@
                         <label class="label">Select Plan</label>
                         <div class="control">
                             <div class="select">
-                                <select>
+                                <select id="plane"> 
                                     <option>Select plan</option>
-                                    <option>Plan 1</option>
-                                    <option>Plan 2</option>
-                                    <option>Plan 3</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
                                 </select>
                             </div>
                         </div>
@@ -102,14 +102,47 @@
 
                     <div class="field is-grouped">
                         <div class="control">
-                            <button class="font-thai button is-size-5">บันทึกข้อมูล</button>
+                            <button class="font-thai button is-size-5" type="submit" onclick="update()">บันทึกข้อมูล</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+    
     <%- include('footer') %>
 </body>
+<script>
+    async function update(){
+        var fname = document.getElementById("fname").value
+        var lname = document.getElementById("lname").value
+        var gender = document.getElementById("gender").value
+        var age = document.getElementById("age").value
+        var weight = document.getElementById("weight").value
+        var height = document.getElementById("height").value
+        var plan = document.getElementById("plane").value
+        console.log(fname)
+        const up = await fetch('/profile', {
+            method:"PUT",
+            mode:"cors",
+            cache:"no-cache",
+            credentials:"same-origin",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({
+                fname:fname,
+                lname:lname,
+                gender:gender,
+                age:age,
+                weight:weight,
+                height:height,
+                plan:plan
+            })
+           
+        }).then(res => {
+            console.log(res)
+            window.location.href = "/"
+        })
 
+    }
+</script>
 </html>
