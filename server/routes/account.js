@@ -68,13 +68,24 @@ router.get('/', async (req,res,next) =>{
     }
 })
 
-// router.put('/profile', async (req,res,next) => {
-//     try{
+router.put('/profile', async (req,res,next) => {
+    try{
+        const id = req.get('Cookie').split('token=')[1].trim()
+        console.log(id);
+        console.log(req.body);
+        console.log("sd");
+        const [row,fields] = await conn.query(
+            "UPDATE `USER` SET user_fname = ?,user_lname = ? where user_id = ?",
+            [req.body.fname,req.body.lname,id]
+        )
+        const [row2,fields2] = await conn.query(
+            "UPDATE `PROFILE` SET profile_age = ?, profile_height = ?,profile_weight = ? ,profile_gender = ? where user_id = ?",
+            [req.body.age,req.body.height,req.body.weight,req.body.gerder,id]
+        )
 
-//     }catch(er){
-//         console.log(er);
-//     }
-// })
+    }catch(er){
+        console.log(er);
+    }
+})
 
 exports.router = router;
-
