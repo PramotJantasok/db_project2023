@@ -31,13 +31,15 @@ router.post('/register',async (req,res,next) => {
 router.post('/login' ,async (req,res,next) => {
     try{
         const {login_name,login_password} = req.body;
-        console.log(req.body);
+        // console.log(req.body);
         const [row,fields] = await conn.query(
             "SELECT user_name,user_password FROM `USER` WHERE user_name = ? and user_password = ?",
             [login_name,login_password]
         )
-        if (row.length == 2){
+        console.log(row);
+        if (row.length == 1){
             res.render("home")
+            console.log("success");
         }
         else{
             res.render("login")
