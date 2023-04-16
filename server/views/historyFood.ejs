@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>History Food </title>
+    <!-- Link Bulma CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/table.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <%- include('nav') %>
+    <div class="container">
+        <div class="colunms">
+            <div class="column">
+                <div class="title">FOOD HISTORY</div>
+            </div>
+        </div>
+    </div>
+
+    <% daily.forEach(item =>{ %>
+        <div class="container mt-4">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="is-size-3">ตรางอาหารวันที่ <%= item.daily_date.toLocaleDateString('el-GR') %></h1>
+                </div>
+            </div>
+            <table class="table is-striped is-hoverable is-fullwidth is-size-4">
+                <thead>
+                <tr>
+                    <th>Meal</th>
+                    <th>Menu</th>
+                    <th>Calories</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <tr>
+                    <td>Breakfast</td> <td></td> <td></td>
+                    </tr>
+                    <% meal.forEach(m =>{%>
+                        <% if (m.meal_name === "breakfast" && m.daily_id == item.daily_id) {%>
+                        <tr>
+                          <td></td> <td><%= m.food_name %></td> 
+                          <td><%= m.food_cal %></td> 
+                        </tr>
+                        <%}%>
+          
+                    <% })%>
+                </tr>
+
+                <tr>
+                    <tr>
+                    <td>Lunch</td> <td></td> <td></td>
+                    </tr>
+                    <% meal.forEach(m =>{%>
+                        <% if (m.meal_name === "lanch" && m.daily_id == item.daily_id) {%>
+                        <tr>
+                          <td></td> <td><%= m.food_name %></td> 
+                          <td><%= m.food_cal %></td> 
+                        </tr>
+                        <%}%>
+          
+                    <% })%>
+
+                </tr>
+
+                <tr>
+                    <tr>
+                    <td>Dinner</td> <td></td> <td></td>
+                    </tr>
+                    
+                    <% meal.forEach(m =>{%>
+                        <% if (m.meal_name === "dinner" && m.daily_id == item.daily_id) {%>
+                        <tr>
+                          <td></td> <td><%= m.food_name %></td> 
+                          <td><%= m.food_cal %></td> 
+                        </tr>
+                        <%}%>
+          
+                    <% })%>
+
+                </tr>
+
+                <tr>
+                    <tr>
+                    <td>Snack</td> <td></td> <td></td>
+                    </tr>
+                    <% meal.forEach(m =>{%>
+                        <% if (m.meal_name === "snack" && m.daily_id == item.daily_id) {%>
+                        <tr>
+                          <td></td> <td><%= m.food_name %></td> 
+                          <td><%= m.food_cal %></td> 
+                        </tr>
+                        <%}%>
+          
+                    <% })%>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    <%}); %>
+
+    <%- include("footer") %>
+    <!-- Link Bulma JavaScript file -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"></script>
+
+
+  </body>
+
+</html>

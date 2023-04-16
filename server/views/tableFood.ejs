@@ -15,7 +15,7 @@
     <div class="container">
       <h1 class="title">Table of Food</h1>
       <div class="level-right buttons">
-        <a class="button" href="#">History</a>
+        <a class="button" href="/table/history/food">History</a>
       </div>
     </div>
       <table class="table is-striped is-hoverable is-fullwidth is-size-4">
@@ -31,46 +31,62 @@
             <tr>
               <td>Breakfast</td> <td></td> <td></td>
             </tr>
-            <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td> 
-            </tr>
-            <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td>
-            </tr>
-            <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td>
-            </tr>
+
+            <% dialy.forEach(item =>{%>
+              <% if (item.meal_name === "breakfast") {%>
+              <tr>
+                <td></td> <td><%= item.food_name %></td> 
+                <td><%= item.food_cal %> <button class="mx-6 button is-danger" onclick="delFood('<%= item.meal_id %>', '<%= item.food_id %>')">ลบ</button></td> 
+              </tr>
+              <%}%>
+
+            <% })%>
           </tr>
 
           <tr>
             <tr>
               <td>Lunch</td> <td></td> <td></td>
             </tr>
-            <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td>
-            </tr>
-            <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td>
-            </tr>
+            <% dialy.forEach(item =>{%>
+              <% if (item.meal_name === "lunch") {%>
+              <tr>
+                <td></td> <td><%= item.food_name %></td> <td><%= item.food_cal %> <button class="mx-6 button is-danger" onclick="delFood('<%= item.meal_id %>', '<%= item.food_id %>')">ลบ</button></td> 
+              </tr>
+              <%}%>
+            <% })%>
           </tr>
 
           <tr>
             <tr>
-              <td>Lunch</td> <td></td> <td></td>
+              <td>Dinner</td> <td></td> <td></td>
             </tr>
+            <% dialy.forEach(item =>{%>
+              <% if (item.meal_name === "lunch") {%>
+              <tr>
+                <td></td> <td><%= item.food_name %></td> <td><%= item.food_cal %> <button class="mx-6 button is-danger " onclick="delFood('<%= item.meal_id %>', '<%= item.food_id %>')">ลบ</button></td> 
+              </tr>
+              <%}%>
+            <% })%>
+          </tr>
+
+          <tr>
             <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td>
+              <td>Snack</td> <td></td> <td></td>
             </tr>
-            <tr>
-              <td></td> <td>menu1</td> <td>200 <button class="mx-6">ลบ</button></td>
-            </tr>
+            <% dialy.forEach(item =>{%>
+              <% if (item.meal_name === "snack") {%>
+              <tr>
+                <td></td> <td><%= item.food_name %></td> <td><%= item.food_cal %> <button class="mx-6 button is-danger " onclick="delFood('<%= item.meal_id %>', '<%= item.food_id %>')">ลบ</button></td> 
+              </tr>
+              <%}%>
+            <% })%>
           </tr>
 
         </tbody>
       </table>
-      <div class="level-item">
+      <!-- <div class="level-item">
         <button class="font-thai button" style="width: 400px; font-size: 25px;">ยืนยันรายการอาหาร</button>
-      </div>
+      </div> -->
       
       <div class="mt-2 p-4 mb-2">
         <textarea class="textarea" placeholder="Add any additional notes here"></textarea>
@@ -78,5 +94,30 @@
     </div>
     <!-- Link Bulma JavaScript file -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"></script>
+
+
   </body>
+  <script>
+    async function delFood(mid, fid){
+      try{
+        const del = await fetch('/delete/daily/food',{
+          method: "delete",
+          mode:"cors",
+          cache:"no-cache",
+          credentials:"same-origin",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            meal_id: mid,
+            food_id: fid
+          })
+        })
+        window.location.href = '/table/food'
+      }catch(er){
+        console.log(er);
+        window.location.href = '/table/food'
+      }
+    }
+  </script>
 </html>
