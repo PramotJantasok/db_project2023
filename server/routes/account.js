@@ -39,9 +39,7 @@ router.post('/login' ,async (req,res,next) => {
 
         if (row.length == 1){
             res.setHeader('Set-Cookie', 'token='+row[0].user_id)
-            res.render("home", {
-                id: row.user_id
-            })
+            res.redirect("/")
             console.log("success");
         }
         else{
