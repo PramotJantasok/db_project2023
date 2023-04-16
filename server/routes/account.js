@@ -68,5 +68,13 @@ router.get('/', async (req,res,next) =>{
     }
 })
 
+// router.put('/profile', async (req,res,next) => {
+//     try{
+
+//     }catch(er){
+//         console.log(er);
+//     }
+// })
+
 exports.router = router;
 
