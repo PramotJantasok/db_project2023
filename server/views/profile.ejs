@@ -40,14 +40,14 @@
                     <div class="field">
                         <label class="label">First Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Enter your first name" id="fname" value="<%=  %>">
+                            <input class="input" type="text" placeholder="Enter your first name" id="fname" value="<%= user1.user_fname%>">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Last Name</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Enter your last name" id="lname" >
+                            <input class="input" type="text" placeholder="Enter your last name" id="lname" value="<%= user1.user_lname%>">
                         </div>
                     </div>
 
@@ -55,8 +55,8 @@
                         <label class="label">Gender</label>
                         <div class="control">
                             <div class="select">
-                                <select id="gender">
-                                    <option>Select gender</option>
+                                <select id="gender" >
+                                    <option><%= user2.profile_gender %></option>
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>Other</option>
@@ -68,21 +68,21 @@
                     <div class="field">
                         <label class="label">Age</label>
                         <div class="control">
-                            <input class="input" type="number" placeholder="Enter your age" id="age">
+                            <input class="input" type="number" placeholder="Enter your age" id="age" value="<%= user2.profile_age %>">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Weight(kg)</label>
                         <div class="control">
-                            <input class="input" type="number" placeholder="Enter your weight" id="weight">
+                            <input class="input" type="number" placeholder="Enter your weight" id="weight" value="<%= user2.profile_weight %>">
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Height(cm)</label>
                         <div class="control">
-                            <input class="input" type="number" placeholder="Enter your height" id="height">
+                            <input class="input" type="number" placeholder="Enter your height" id="height" value="<%= user2.profile_height %>">
                         </div>
                     </div>
 
@@ -90,8 +90,8 @@
                         <label class="label">Select Plan</label>
                         <div class="control">
                             <div class="select">
-                                <select id="plane"> 
-                                    <option>Select plan</option>
+                                <select id="plane" > 
+                                    <option> <%= user2.plan_id %> </option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>

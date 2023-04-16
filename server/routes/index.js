@@ -23,9 +23,20 @@ router.get('/food', (req,res,next) => {
     res.render('addfood');
  })
 
- router.get('/profile' , (req,res,next) => {
-    res.render('profile')
-    
+ router.get('/profile' ,async (req,res,next) => {
+    const id = req.get('Cookie').split('token=')[1].trim()
+    console.log(id);
+    const [row,field] = await conn.query(
+        "SELECT user_fname,user_lname FROM `USER` WHERE user_id = ?",
+        [id]
+    )
+    console.log(row[0]);
+    const [row2,fields2] = await conn.query(
+        "SELECT plan_id,profile_age,profile_height,profile_weight,profile_gender FROM `PROFILE` WHERE user_id = ?",
+        [id]
+    )
+    console.log(row2[0]);
+    res.render('profile', {user1:row[0],user2:row2[0]});
  })
 
 router.get('/tableFood', (req,res,next) => {

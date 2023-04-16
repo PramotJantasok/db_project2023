@@ -79,8 +79,8 @@ router.put('/profile', async (req,res,next) => {
             [req.body.fname,req.body.lname,id]
         )
         const [row2,fields2] = await conn.query(
-            "UPDATE `PROFILE` SET plan_id = ?,profile_age = ?, profile_height = ?,profile_weight = ? ,profile_gender = ? where user_id = ?",
-            [req.body.plan,req.body.age,req.body.height,req.body.weight,req.body.gerder,id]
+            "UPDATE `PROFILE` SET profile_age = ?, profile_height = ?,profile_weight = ? ,profile_gender = ? where user_id = ?",
+            [req.body.age,req.body.height,req.body.weight,req.body.gerder,id]
         )
 
     }catch(er){
