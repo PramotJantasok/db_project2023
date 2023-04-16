@@ -18,9 +18,20 @@ function dataTime(){
     return yyyy+'-'+mm+'-'+dd;
 }
 
-router.get('/table/food', (req, res, next) =>{
-    const data = dataTime();
-    res.render('tableFood.ejs', {});
+router.get('/table/food', async (req, res, next) =>{
+    const time = dataTime();
+    const [row, field] = await conn.query('select * from DAILY where user_id = ?, daily_date = ?',[
+        1, time
+    ])
+    res.render('tableFood.ejs', {data: row[0]});
 });
+
+router.get('/table/food/history'), async (req, res, next) =>{
+    
+    const [row, field] = await conn.query('select * from DAILY where user_id = ?');
+    const [row2, filed2] = await conn.query('select * from MEAL_FOOD where user_id = ?')
+    const [row3, filed3] = await conn.query('select * from food');
+    res.render('')
+}
 
 exports.router = router;
