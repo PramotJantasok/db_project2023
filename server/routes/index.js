@@ -10,9 +10,6 @@ router.get('/login', (req, res, next) => {
     res.render("login");
 });
 
-router.get('/food', (req, res, next) => {
-    res.render('food');
-});
 
 router.get('/addfood', (req, res, next) => {
     res.render('addfood');

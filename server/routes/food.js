@@ -102,4 +102,14 @@ router.get('/table/history/food', async (req, res, next) =>{
     }
 })
 
+router.get('/food', async (req, res, next) => {
+    try{
+        const [food, field] = await conn.query('select * from FOOD')
+        res.render('food', {foods:food});
+    }catch(er){
+        console.log(er);
+    }
+    
+});
+
 exports.router = router;

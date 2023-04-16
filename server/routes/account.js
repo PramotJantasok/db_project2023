@@ -56,8 +56,8 @@ router.get('/', async (req,res,next) =>{
         const id = req.get('Cookie').split('token=')[1].trim()
         console.log(id);
         const [row,fields] = await conn.query(
-            "SELECT profile_height,profile_weight,user_fname,user_lname FROM `PROFILE` join `USER` as u using (user_id) where u.user_id = ?;",
-            [id]
+            "SELECT * FROM `PROFILE` join `USER` as u using (user_id) left outer join PLAN using(plan_id) where u.user_id = ?;",
+            [Number(id)]
         )
         console.log(row[0]);
         res.render('home',{user:row[0]})
