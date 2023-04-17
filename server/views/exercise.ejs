@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Page</title>
+    <!-- Link to Bulma CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="exercise.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include('nav') %>
+
+        <section class="section">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <form>
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Search Exercise">
+                            </div>
+                            <div class="control">
+                                <button class="button">ค้นหา</button>
+                                <!-- You can also use an icon instead of text for the button -->
+                                <!-- <i class="fas fa-search"></i> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="title">Exercise</h1>
+                <div class="columns is-multiline">
+                    <!-- Food item cards -->
+                    <% ex.forEach(item=>{ %>
+
+                        <div class="column is-one-quarter">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="<%= item.ex_img%>" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content has-text-centered">
+                                    <div class="content">
+                                        <p class="food-name"><strong>
+                                                <%= item.ex_name %>
+                                            </strong></p>
+                                    </div>
+                                    <button class="button is-fullwidth"
+                                        onclick="addEx('<%= item.ex_id %>')">เพิ่มลงในตาราง</button>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+        </section>
+</body>
+
+<script>
+    async function addEx(exid) {
+        alert("Add Exercises !")
+        const add = await fetch('/add/ex', {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                fid: fids,
+                meal_name: meal
+            })
+        })
+    }
+</script>

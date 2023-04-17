@@ -15,7 +15,8 @@ app.use(indexRoute.router);
 
 const foodRoute = require('./routes/food');
 const AccountRoute = require('./routes/account');
-
+const exerciseRoute = require('./routes/exercise')
+app.use(exerciseRoute.router)
 app.use(AccountRoute.router);
 app.use(foodRoute.router);
 

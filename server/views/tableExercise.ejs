@@ -29,47 +29,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-                <div class="buttons">
-                    <a class="button" href="addfood.html">Add Exercise</a>
-                </div>
-            </td>
-            <td>0</td>
-            <td>-</td>
-            <td>0</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            
-          </tr>
-          <tr>
-            <td>
-                <div class="buttons">
-                    <a class="button" href="addfood.html">Add Exercise</a>
-                </div>
-            </td>
-            <td>0</td>
-            <td>-</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>
-                <div class="buttons">
-                    <a class="button" href="addfood.html">Add Exercise</a>
-                </div>
-            </td>
-            <td>0</td>
-            <td>-</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
+          <% ex.forEach(item =>{ %>
+            <tr>
+              <td><%= item.ex_name %></td>
+              <td><%= item.ex_type %></td>
+              <td><%= item.ex_muscle %></td>
+
+              <% if (item.ex_type === "weight_training") {%>
+                <td><%= item.ex_amountRecommend/10 %> set</td>
+              <%}%>
+              <% if (item.ex_type === 'cardio') {%>
+                  <td><%= item.ex_amountRecommend %> นาที</td>
+              <%}%>
+
+              
+
+              <% if (item.ex_type === "weight_training") {%>
+              <td><%= item.amount %> set</td>
+              <%}%>
+              <% if (item.ex_type === 'cardio') {%>
+                <td><%= item.amount %> นาที</td>
+              <%}%>
+            </tr>
+          <% }); %>
         </tbody>
       </table>
-      <div class="level-item">
-        <button class="font-thai button" style="width: 400px; font-size: 25px;">สรุปผลการออกกำลังกาย</button>
-      </div>
       
       <div class="mt-5">
         <textarea class="textarea" placeholder="Add any additional notes here"></textarea>

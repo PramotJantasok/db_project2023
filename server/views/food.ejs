@@ -36,7 +36,7 @@
 						<div class="card">
 							<div class="card-image">
 								<figure class="image is-4by3">
-									<img src="https://thethaiger.com/th/wp-content/uploads/2022/04/2-22.jpg" alt="Placeholder image">
+									<img src="<%= item.food_img %>" alt="Placeholder image">
 								</figure>
 							</div>
 							<div class="card-content has-text-centered">
@@ -48,7 +48,7 @@
 									</div>
 									
 								</div>
-								<button class="button is-fullwidth">เพิ่มลงในตาราง</button>
+								<a class="button is-fullwidth" type="button" href="/add/food/<%= item.food_id %>">เพิ่มลงในตาราง</a>
 							</div>
 						</div>
 					</div>
@@ -57,13 +57,3 @@
 		</div>
     </section>
 </body>
-
-<script>
-	async function addFood(food_id){
-		try{
-			const add = await fetch('')
-		}catch(er){
-			console.log(er)
-		}
-	}
-</script>
